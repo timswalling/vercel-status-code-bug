@@ -24,7 +24,11 @@ Error.getInitialProps = ({ res, err }) => {
   const errStatusCode = err && err.statusCode;
   const resStatusCode = res && res.statusCode;
 
-  return { errStatusCode, resStatusCode, statusCode };
+  const initialProps = { errStatusCode, resStatusCode, statusCode };
+
+  console.info("Initial props:", initialProps);
+
+  return initialProps;
 };
 
 export default Error;
